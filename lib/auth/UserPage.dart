@@ -29,7 +29,7 @@ class UserPage extends StatefulWidget {
 }
 
 class _UserPageState extends State<UserPage> {
-  static const String targetWord = "SZTORMOWY SZLAK";
+  static const String targetWord = "NADMORSKA OAZA";
   late List<bool> isQuestionClicked;
   late List<bool> isTaskNearby;
   LatLng? _userPosition;
