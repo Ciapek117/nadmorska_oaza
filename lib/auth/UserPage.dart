@@ -414,7 +414,7 @@ class _UserPageState extends State<UserPage> {
       children: [
         Positioned.fill(
           child: Image.asset(
-            'images/memory_tlo.png',
+            'images/user_page_tlo.png',
             fit: BoxFit.cover,
           ),
         ),

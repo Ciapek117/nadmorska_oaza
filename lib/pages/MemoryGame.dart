@@ -122,7 +122,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'images/memory_tlo.png', // Ścieżka do obrazu w katalogu assets
+              'images/hangman_tlo.png', // Ścieżka do obrazu w katalogu assets
               fit: BoxFit.cover,
             ),
           ),
