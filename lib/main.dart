@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mala_atlantyda/Widgets/AnimatedScreen.dart';
+import 'package:mala_atlantyda/Widgets/SplashScreen.dart';
 
 import './auth/LoginUser.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnimatedScreen(),
+      home: SplashScreen(),
       theme: ThemeData(
         fontFamily: GoogleFonts.poppins().fontFamily,
         textTheme: GoogleFonts.poppinsTextTheme(),

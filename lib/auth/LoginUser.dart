@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:geolocator/geolocator.dart';
 
-import 'package:mala_atlantyda/Widgets/AnimatedScreen.dart';
+import 'package:mala_atlantyda/Widgets/SplashScreen.dart';
 import './UserPage.dart';
 import '../Widgets/CustomTextField.dart';
 
