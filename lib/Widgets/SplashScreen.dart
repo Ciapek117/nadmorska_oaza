@@ -49,30 +49,22 @@ class SplashScreen extends StatelessWidget {
 
 
             // ===== TŁO – DALeki las =====
-            tree(
-              left: -size.width * 0.10,
-              bottom: size.height * 0.48,
-              height: size.height * 0.25,
-              asset: SplashAssets.trees[2],
-              opacity: 0.22,
-              blur: 3,
-              tint: const Color(0xFF9AC27A),
-            ),
+
             tree(
               left: size.width * 0.28,
               bottom: size.height * 0.50,
               height: size.height * 0.23,
               asset: SplashAssets.trees[0],
-              opacity: 0.20,
+              opacity: 0.30,
               blur: 3,
               tint: const Color(0xFF9AC27A),
             ),
             tree(
-              right: -size.width * 0.12,
-              bottom: size.height * 0.48,
-              height: size.height * 0.25,
-              asset: SplashAssets.trees[1],
-              opacity: 0.22,
+              right: -size.width * 0.17,
+              bottom: size.height * 0.46,
+              height: size.height * 0.30,
+              asset: SplashAssets.trees[2],
+              opacity: 0.40,
               blur: 3,
               tint: const Color(0xFF9AC27A),
             ),
@@ -83,15 +75,26 @@ class SplashScreen extends StatelessWidget {
 
             // ===== ŚRODEK – ściany lasu =====
             tree(
+              left: -size.width * 0.12,
+              bottom: size.height * 0.45,
+              height: size.height * 0.30,
+              asset: SplashAssets.trees[2],
+              opacity: 0.8,
+              blur: 2,
+              tint: const Color(0xFF9AC27A),
+            ),
+            tree(
               left: -size.width * 0.22,
               bottom: size.height * 0.26,
               height: size.height * 0.42,
+              opacity: 0.7,
               asset: SplashAssets.trees[0],
             ),
             tree(
-              right: -size.width * 0.22,
+              right: -size.width * 0.02,
               bottom: size.height * 0.26,
               height: size.height * 0.44,
+              opacity: 0.80,
               asset: SplashAssets.trees[1],
             ),
 
@@ -104,7 +107,7 @@ class SplashScreen extends StatelessWidget {
               asset: SplashAssets.trees[0],
             ),
             tree(
-              right: -size.width * 0.30,
+              right: -size.width * 0.45,
               bottom: size.height * 0.10,
               height: size.height * 0.68,
               asset: SplashAssets.trees[1],
