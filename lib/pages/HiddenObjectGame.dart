@@ -222,7 +222,8 @@ class _HiddenObjectScreenState extends State<HiddenObjectScreen> {
                         Text(
                           isFound ? '✅ $objToFind' : objToFind,
                           style: GoogleFonts.poppins(
-                            color: isFound ? Colors.greenAccent : Colors.amber,
+                            color: isFound ? Colors.greenAccent : Color(
+                                0xffc1d160),
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),

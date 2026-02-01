@@ -29,7 +29,7 @@ class _CodeUnlockScreenState extends State<CodeUnlockScreen> {
   List<int> numbers = [0, 0, 0, 0];
   final List<int> correctCode = [1, 9, 6, 3];
   bool isUnlocked = false;
-  List<Color> colors = List.filled(4, Color(0xFFAFCBFF));
+  List<Color> colors = List.filled(4, Color(0xff717559));
   bool isDialogShown = false;
   int attempts = 0;
 
@@ -85,7 +85,7 @@ class _CodeUnlockScreenState extends State<CodeUnlockScreen> {
         } else if (correctCode.contains(numbers[i])) {
           colors[i] = Colors.orange;
         } else {
-          colors[i] = Color(0xFFAFCBFF);
+          colors[i] = Color(0xff717559);
         }
       }
     });
@@ -188,7 +188,7 @@ class _CodeUnlockScreenState extends State<CodeUnlockScreen> {
                     return Column(
                       children: [
                         IconButton(
-                          icon: Image.asset("images/arrow_up.png", color: Color(0xFFAFCBFF), width: 40, height: 50),
+                          icon: Image.asset("images/arrow_up.png", color: Color(0xff717559), width: 40, height: 50),
                           onPressed: () => _increment(index),
                         ),
                         Container(
@@ -202,7 +202,7 @@ class _CodeUnlockScreenState extends State<CodeUnlockScreen> {
                           ),
                         ),
                         IconButton(
-                          icon: Image.asset("images/arrow_down.png", color: Color(0xFFAFCBFF), width: 40, height: 50),
+                          icon: Image.asset("images/arrow_down.png", color: Color(0xff717559), width: 40, height: 50),
                           onPressed: () => _decrement(index),
                         ),
                       ],

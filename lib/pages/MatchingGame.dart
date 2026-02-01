@@ -106,7 +106,7 @@ class _MatchingGamePageState extends State<MatchingGamePage> {
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     "Dopasuj miasta do odległości",
-                    style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Color(0xFFEFA00B)),
+                    style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold, color: Color(0xffB2D102)),
                     textAlign: TextAlign.left,
                   ),
                 ),
@@ -121,7 +121,7 @@ class _MatchingGamePageState extends State<MatchingGamePage> {
                             height: MediaQuery.of(context).size.height * 0.23, // Zmniejszona wysokość
                             padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.015), // Mniejszy padding
                             decoration: BoxDecoration(
-                              border: Border.all(color: Color(0xFFAFCBFF), width: MediaQuery.of(context).size.width * 0.004), // Cieńsze obramowanie
+                              border: Border.all(color: Color(0xFFB2D102), width: MediaQuery.of(context).size.width * 0.004), // Cieńsze obramowanie
                               borderRadius: BorderRadius.circular(MediaQuery.of(context).size.width * 0.025), // Mniejsze zaokrąglenie rogów
                             ),
                             child: Wrap(
@@ -141,7 +141,7 @@ class _MatchingGamePageState extends State<MatchingGamePage> {
                                       child: Container(
                                         width: MediaQuery.of(context).size.width * 0.35,
                                         height: MediaQuery.of(context).size.height * 0.06,
-                                        color: Color(0xFF0075C4),
+                                        color: Color(0xFF556704),
                                         alignment: Alignment.center,
                                         child: Text(city, style: TextStyle(color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.035)),
                                       ),
@@ -150,14 +150,14 @@ class _MatchingGamePageState extends State<MatchingGamePage> {
                                       width: MediaQuery.of(context).size.width * 0.35,
                                       height: MediaQuery.of(context).size.height * 0.06,
                                       alignment: Alignment.center,
-                                      color: Colors.blue.withOpacity(0.5),
+                                      color: Color(0xFFB2D102).withOpacity(0.5),
                                       child: Text(city, style: TextStyle(color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.035)),
                                     ),
                                     child: Container(
                                       width: MediaQuery.of(context).size.width * 0.35,
                                       height: MediaQuery.of(context).size.height * 0.06,
                                       alignment: Alignment.center,
-                                      color: Color(0xFF0075C4),
+                                      color: Color(0xFF556704),
                                       child: Text(city, style: TextStyle(color: Colors.white, fontSize: MediaQuery.of(context).size.width * 0.035)),
                                     ),
                                   ),
@@ -172,7 +172,7 @@ class _MatchingGamePageState extends State<MatchingGamePage> {
                             height: MediaQuery.of(context).size.height * 0.22, // Zmniejszona wysokość
                             padding: EdgeInsets.all(7), // Dodanie paddingu 5
                             decoration: BoxDecoration(// Dodanie czarnego tła
-                              border: Border.all(color: Color(0xFFAFCBFF), width: 2), // Dodanie obramowania
+                              border: Border.all(color: Color(0xFFB2D102), width: 2), // Dodanie obramowania
                               borderRadius: BorderRadius.circular(10), // Zaokrąglenie rogów
                             ),
                             child: Wrap(
@@ -198,7 +198,8 @@ class _MatchingGamePageState extends State<MatchingGamePage> {
                                         .firstWhere((entry) => entry.value == distance, orElse: () => MapEntry("", null))
                                         .key;
                                     bool isCorrect = matchedCity.isNotEmpty && userMatches[matchedCity] == cityDistances[matchedCity];
-                                    Color boxColor = isCorrect ? Colors.green : (matchedCity.isNotEmpty ? Color(0xFFEA5B60) : Color(0xFFAFCBFF));
+                                    Color boxColor = isCorrect ? Colors.green : (matchedCity.isNotEmpty ? Color(0xFFEA5B60) : Color(
+                                        0xFFE8F3B2));
                                     return Container(
                                       width: MediaQuery.of(context).size.width * 0.35,
                                       height: MediaQuery.of(context).size.height * 0.06,

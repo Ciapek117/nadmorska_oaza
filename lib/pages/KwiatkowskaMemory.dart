@@ -4,34 +4,23 @@ import 'package:flutter/material.dart';
 
 import '../Widgets/FlipCard.dart';
 
-void main() {
-  runApp(MemoryGame());
-}
+class KwiatkowskaMemory extends StatefulWidget {
+  const KwiatkowskaMemory({Key? key}) : super(key: key);
 
-class MemoryGame extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MemoryGameScreen(),
-    );
-  }
+  _KwiatkowskaMemoryState createState() => _KwiatkowskaMemoryState();
 }
 
-class MemoryGameScreen extends StatefulWidget {
-  @override
-  _MemoryGameScreenState createState() => _MemoryGameScreenState();
-}
-
-class _MemoryGameScreenState extends State<MemoryGameScreen> {
+class _KwiatkowskaMemoryState extends State<KwiatkowskaMemory> {
   List<String> images = [
-    "images/bunkier.jpg",
-    "images/kladka.jpg",
-    "images/latarnia.jpg",
-    "images/lawka.jpg",
-    "images/syrenka.jpg",
-    "images/ustka.jpg",
+    "images/k1.jpg",
+    "images/k2.jpg",
+    "images/k3.jpg",
+    "images/k4.jpg",
+    "images/k5.jpg",
+    "images/k6.jpg",
   ];
+
   List<String> gameGrid = [];
   List<bool> cardFlipped = [];
   int? firstIndex;
@@ -45,13 +34,11 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
     _initializeGame();
   }
 
-
-
   void _initializeGame() {
     List<String> pairs = [...images, ...images];
     pairs.shuffle(Random());
     gameGrid = List.from(pairs);
-    cardFlipped = List.generate(12, (index) => false);
+    cardFlipped = List.generate(12, (_) => false);
     firstIndex = null;
     secondIndex = null;
     waiting = false;
@@ -72,13 +59,14 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
 
   void _flipCard(int index) {
     if (waiting || cardFlipped[index]) return;
+
     setState(() {
       if (firstIndex == null) {
         firstIndex = index;
       } else if (secondIndex == null) {
         secondIndex = index;
         waiting = true;
-        Future.delayed(Duration(seconds: 1), _checkMatch);
+        Future.delayed(const Duration(seconds: 1), _checkMatch);
       }
     });
   }
@@ -89,6 +77,7 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
         cardFlipped[firstIndex!] = true;
         cardFlipped[secondIndex!] = true;
       }
+
       firstIndex = null;
       secondIndex = null;
       waiting = false;
@@ -108,8 +97,8 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
       title: 'Gratulacje!',
       desc: 'Ułożono wszystkie pary!',
       btnOkText: 'Powrót!',
-      btnOkOnPress: () => {
-       Navigator.pop(context,true)
+      btnOkOnPress: () {
+        Navigator.pop(context, true);
       },
     ).show();
   }
@@ -117,12 +106,12 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF0c4767),
+      backgroundColor: const Color(0xFF0c4767),
       body: Stack(
         children: [
           Positioned.fill(
             child: Image.asset(
-              'images/hangman_tlo.png', // Ścieżka do obrazu w katalogu assets
+              'images/hangman_tlo.png',
               fit: BoxFit.cover,
             ),
           ),
@@ -134,14 +123,20 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 100,),
-              Text("Memory!", style: TextStyle(color: Color(0xff2F3316),fontSize: 50,
-                  fontWeight: FontWeight.bold),),
-              SizedBox(height: 50,),
+              const SizedBox(height: 100),
+              const Text(
+                "Memory!",
+                style: TextStyle(
+                  color: Color(0xff2F3316),
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 50),
               Expanded(
                 child: GridView.builder(
-                  padding: EdgeInsets.all(16),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  padding: const EdgeInsets.all(16),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
@@ -149,7 +144,9 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                   itemCount: gameGrid.length,
                   itemBuilder: (context, index) {
                     return FlipCard(
-                      flipped: cardFlipped[index] || index == firstIndex || index == secondIndex,
+                      flipped: cardFlipped[index] ||
+                          index == firstIndex ||
+                          index == secondIndex,
                       onTap: () => _flipCard(index),
                       front: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
@@ -162,22 +159,24 @@ class _MemoryGameScreenState extends State<MemoryGameScreen> {
                       ),
                       back: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFF556704),
+                          color: const Color(0xFF556704),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         alignment: Alignment.center,
-                        child: Icon(Icons.question_mark, size: 32, color: Color(0xFFE8F3B2)),
+                        child: const Icon(
+                          Icons.question_mark,
+                          size: 32,
+                          color: Color(0xFFE8F3B2),
+                        ),
                       ),
                     );
-
                   },
                 ),
               ),
             ],
           ),
-
         ],
-      )
+      ),
     );
   }
 }

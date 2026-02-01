@@ -87,35 +87,35 @@ class _QuestionPageState extends State<QuestionPage> {
                     style: TextStyle(
                       fontSize: widget.fontSize ?? 24,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFFADE8F4),
+                      color: Color(0xFFD4EA3E),
                     ),
                   ),
                   SizedBox(height: 20),
                   TextField(
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Color(0xFFB2D102)),
                     controller: _controller,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.black.withOpacity(0.5),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: Color(0xFFB2D102)),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: Color(0xFFB2D102)),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: Color(0xFFB2D102)),
                       ),
                       hintText: "Wpisz odpowiedź",
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: Color(0xFFB2D102)),
                     ),
                   ),
                   SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: checkAnswer,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF0c4767),
+                      backgroundColor: Color(0xFF617004),
                       foregroundColor: Colors.white,
                     ),
                     child: Text("Sprawdź"),

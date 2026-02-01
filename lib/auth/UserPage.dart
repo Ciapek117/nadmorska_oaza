@@ -18,6 +18,7 @@ import 'package:mala_atlantyda/pages/HangmanGame.dart';
 import 'package:mala_atlantyda/pages/MemoryGame.dart';
 import 'package:mala_atlantyda/pages/PongGame.dart';
 import 'package:mala_atlantyda/pages/LatarniaMorskaPage.dart';
+import 'package:mala_atlantyda/pages/KwiatkowskaMemory.dart';
 import '../pages/CelebrationPage.dart';
 import '../pages/HiddenObjectGame.dart';
 
@@ -53,7 +54,8 @@ class _UserPageState extends State<UserPage> {
     "Chomczyńscy",
     "Seekenmoor",
     "Mistral",
-    "Bunkry Bluchera"
+    "Bunkry Bluchera",
+    "Ławeczka Ireny Kwiatkowskiej"
   ];
 
   final List<Widget> gamePages = [
@@ -68,7 +70,8 @@ class _UserPageState extends State<UserPage> {
     CodeUnlockScreen(),
     HiddenObjectScreen(),
     MistralPage(),
-    RebusGame()
+    RebusGame(),
+    KwiatkowskaMemory()
   ];
 
   final List<LatLng> taskLocations = [
@@ -96,6 +99,7 @@ class _UserPageState extends State<UserPage> {
     // Mistral
     LatLng(54.586012002242, 16.849496477696533),
     // Bunkry Bluchera
+    LatLng(54.5885815207828, 16.865499024783468)
   ];
 
   List<LatLng> taskLocations2 = [];
@@ -147,7 +151,8 @@ class _UserPageState extends State<UserPage> {
   Future<void> setUserLocations() async {
     LatLng userLocation = await getUserLocation();
     setState(() {
-      taskLocations2 = List.generate(12, (_) => userLocation);
+      taskLocations2 = List.generate(questions.length, (_) => userLocation);
+
     });
   }
 
@@ -357,9 +362,9 @@ class _UserPageState extends State<UserPage> {
                 return ListTile(
                   title: Text(questions[index]),
                   tileColor: isQuestionClicked[index]
-                      ? const Color(0Xff566E3D)
+                      ? const Color(0Xff566E4D)
                       : isTaskNearby[index]
-                      ? const Color(0xFF75AEEB)
+                      ? const Color(0xFF54600D)
                       : Colors.grey.shade700,
                   textColor: Colors.white,
                   onTap: isTaskNearby[index]

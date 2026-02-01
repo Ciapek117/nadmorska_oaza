@@ -96,7 +96,7 @@ class _MistralPageState extends State<MistralPage> {
                       style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: Color(0XffE8F3B2),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -104,13 +104,32 @@ class _MistralPageState extends State<MistralPage> {
                     TextField(
                       controller: controllers[currentIndex],
                       enabled: !isCorrect[currentIndex],
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Color(0xFFE8F3B2)),
                       decoration: InputDecoration(
                         filled: true,
-                        fillColor: Colors.white.withOpacity(0.3),
-                        border: OutlineInputBorder(),
-                        hintStyle: TextStyle(color: Colors.white70),
+                        fillColor: Color(0xFFE8F3B2).withOpacity(0.3),
+
+                        // normalna ramka
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFE8F3B2),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+
+                        // 🔥 ramka gdy TextField jest aktywny
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFFE8F3B2),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+
+                        hintStyle: TextStyle(color: Color(0xFFE8F3B2)),
                       ),
+
                     ),
                     SizedBox(height: 10),
                     Row(
@@ -120,7 +139,7 @@ class _MistralPageState extends State<MistralPage> {
                           icon: Image.asset(
                             "images/arrow_left.png",
                             width: 30,
-                            color: currentIndex > 0 ? Color(0xff0075C4) : Colors.grey,
+                            color: currentIndex > 0 ? Color(0xFFE8F3B2) : Colors.grey,
                           ),
                           onPressed: currentIndex > 0
                               ? () => setState(() => currentIndex--)
@@ -129,7 +148,7 @@ class _MistralPageState extends State<MistralPage> {
                         ElevatedButton(
                           onPressed: isCorrect[currentIndex] ? null : checkAnswer,
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue.withOpacity(0.8),
+                            backgroundColor: Color(0XFFB2D102).withOpacity(0.8),
                           ),
                           child: Text("Sprawdź", style: TextStyle(color: Colors.white)),
                         ),
@@ -137,7 +156,7 @@ class _MistralPageState extends State<MistralPage> {
                           icon: Image.asset(
                             "images/arrow_right.png",
                             width: 30,
-                            color: currentIndex < questions.length - 1 ? Color(0xff0075C4) : Colors.grey,
+                            color: currentIndex < questions.length - 1 ? Color(0xFFE8F3B2) : Colors.grey,
                           ),
                           onPressed: currentIndex < questions.length - 1
                               ? () => setState(() => currentIndex++)

@@ -108,30 +108,35 @@ class _RebusGameState extends State<RebusGame> {
                   ),
                   SizedBox(height: 20),
                   TextField(
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Color(0xFFE8F3B2)),
                     controller: _controller,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.black.withOpacity(0.5),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: Color(0xFFE8F3B2)),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: Color(0xFFE8F3B2)),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: BorderSide(color: Color(0xFFE8F3B2)),
                       ),
                       hintText: "Wpisz odpowiedź",
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: Color(0xFFE8F3B2)),
                     ),
                   ),
                   SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: _checkAnswer,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFFB2D102), // jasny zielony
+                      foregroundColor: Color(0xFF2F3316),     // czarny tekst + ikony
+                    ),
                     child: Text("Sprawdź"),
                   ),
+
                 ],
               ),
             ),

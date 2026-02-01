@@ -111,13 +111,13 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
-        backgroundColor: Color(0xFF216E97).withOpacity(0.5),
-        title: Text("Gratulacje!", style: TextStyle(color: Color(0xFFEFA00B)),),
-        content: Text("Ułożyłeś puzzle poprawnie!", style: TextStyle(color: Color(0xFFEFA00B))),
+        backgroundColor: Color(0xFFE8F3B2).withOpacity(0.5),
+        title: Text("Gratulacje!", style: TextStyle(color: Color(0xff2F3316)),),
+        content: Text("Ułożyłeś puzzle poprawnie!", style: TextStyle(color: Color(0xff2F3316))),
         actions: [
           Container(
             decoration: BoxDecoration(
-            border: Border.all(color: Color(0xFFA3822A), width: 3), // Obramowanie
+            border: Border.all(color: Color(0xff2F3316), width: 3 ), // Obramowanie
           ),
             child: Image(image: AssetImage("images/puzle_plaza.jpg"),),
           ),
@@ -127,7 +127,7 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
               Navigator.of(context).pop();
               Navigator.pop(context,true);
             },
-            child: Text("OK", style: TextStyle(color: Color(0xFFEFA00B))),
+            child: Text("OK", style: TextStyle(color: Color(0xff2F3316))),
           ),
         ],
       ),
@@ -152,7 +152,7 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
               SizedBox(height: 100),
               Text(
                 "Ułóż Puzzle!",
-                style: GoogleFonts.poppins(fontSize: 40, fontWeight: FontWeight.bold, color: Color(0xFFEFA00B)),
+                style: GoogleFonts.poppins(fontSize: 40, fontWeight: FontWeight.bold, color: Color(0xff2F3316)),
               ),
               Expanded(
                 child: Container(
@@ -171,8 +171,8 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
                         child: Padding(
                           padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.04),
                         child: SizedBox(
-                          width: 300,
-                          height: 300,
+                          width: 275,
+                          height: 310,
                           child: GridView.builder(
                             padding: EdgeInsets.zero,
                             physics: NeverScrollableScrollPhysics(),
