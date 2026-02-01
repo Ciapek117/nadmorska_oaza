@@ -11,7 +11,7 @@ class PongBall extends StatelessWidget {
     return Container(
       alignment: Alignment(x, y),
       child: Container(
-        decoration:  BoxDecoration(shape: BoxShape.circle, color: Color(0xFFefa00b)),
+        decoration:  BoxDecoration(shape: BoxShape.circle, color: Color(0xff2F3316)),
         width: 20,
         height: 20,
       ),

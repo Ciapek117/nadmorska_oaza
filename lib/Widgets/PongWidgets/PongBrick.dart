@@ -13,7 +13,7 @@ class PongBrick extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: Container(
-          color: Color(0xFFEFA00B),
+          color: Color(0xff2F3316),
           height: 20,
           width: MediaQuery.of(context).size.width / 5,
         ),

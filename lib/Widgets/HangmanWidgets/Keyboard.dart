@@ -16,11 +16,11 @@ class Keyboard extends StatelessWidget {
       children: 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŻŹ'.split('').map((letter) {
         return ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xFF0075c4),
-            foregroundColor: Colors.white,
+            backgroundColor: Color(0xFF2F3316),
+            foregroundColor: Color(0xFFE8F3B2),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
-              side: BorderSide(color: Colors.white, width: 2),
+              side: BorderSide(color: Color(0xFFE8F3B2), width: 2),
             ),
           ),
           onPressed: (lives > 0 && !guessedLetters.contains(letter)) ? () => onLetterPressed(letter) : null,

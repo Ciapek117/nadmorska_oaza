@@ -298,25 +298,24 @@ class _UserPageState extends State<UserPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0c4767),
       appBar: AppBar(
         title: Text(
           "Odkryj Hasło",
           style: TextStyle(
-            color: showSecondAnimation ? Colors.transparent : Color(0xFFEFA00B),
+            color: showSecondAnimation ? Colors.transparent : Color(0xFFe8f3b2),
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: showSecondAnimation ? Colors.transparent : Color(0xFF0a344a).withOpacity(0.80),
+        backgroundColor: showSecondAnimation ? Colors.transparent : Color(0xFF54600D).withOpacity(0.80),
         elevation: 0,
-        iconTheme: showSecondAnimation ? null : IconThemeData(color: Color(0xFFEFA00B)),
+        iconTheme: showSecondAnimation ? null : IconThemeData(color: Color(0xFFe8f3b2)),
         actions: [
           // Jeżeli showSecondAnimation jest false, wyświetlamy przycisk przełącznika
           if (!showSecondAnimation) ...[
-            const Text("Tryb:", style: TextStyle(color: Color(0xFFEFA00B))),
+            const Text("Tryb:", style: TextStyle(color: Color(0xFFe8f3b2))),
             Switch(
               value: isOriginalLocations,
-              activeColor: const Color(0xFFEFA00B),
+              activeColor: const Color(0xFFe8f3b2),
               onChanged: (bool value) {
                 setState(() {
                   isOriginalLocations = value;
@@ -337,17 +336,17 @@ class _UserPageState extends State<UserPage> {
 
   Widget _buildDrawer() {
     return Drawer(
-      backgroundColor: const Color(0xFF0a344a),
+      backgroundColor: const Color(0xFFe8f3b2),
       child: Column(
         children: [
           const SizedBox(height: 20),
           Container(
             height: 150.0,
-            color: const Color(0xFF0a344a),
+            color: const Color(0xFFe8f3b2),
             child: const Center(
               child: Text(
                 "Wybierz zadanie",
-                style: TextStyle(fontSize: 30, color: Colors.white),
+                style: TextStyle(fontSize: 30, color: Color(0xFF54600D)),
               ),
             ),
           ),
@@ -435,7 +434,7 @@ class _UserPageState extends State<UserPage> {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF1A1A2E).withOpacity(0.50),
+                      color: const Color(0xFFb2d102).withOpacity(0.40),
                       borderRadius: BorderRadius.circular(16),
                       boxShadow: [
                         BoxShadow(
@@ -453,11 +452,11 @@ class _UserPageState extends State<UserPage> {
                             fontSize: 44,
                             fontWeight: FontWeight.w800,
                             letterSpacing: 2,
-                            color: Color(0xFFEFA00B),
+                            color: Color(0xFFb2d102),
                             shadows: [
                               Shadow(
-                                blurRadius: 8,
-                                color: Color(0xFFEF9B0F),
+                                blurRadius: 10,
+                                color: Color(0xFF2F3316),
                                 offset: Offset(0, 0),
                               ),
                             ],
@@ -475,17 +474,17 @@ class _UserPageState extends State<UserPage> {
                                 style: const TextStyle(
                                   fontSize: 40, // Ensures consistency
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xFFAFCBFF),
+                                  color: Color(0xFFb2d102),
                                   letterSpacing: -1,
                                   shadows: [
                                     Shadow(
                                       blurRadius: 4,
-                                      color: Color(0xFF6CA0FF),
+                                      color: Color(0xFF2F3316),
                                       offset: Offset(0, 0),
                                     ),
                                     Shadow(
                                       blurRadius: 8,
-                                      color: Color(0xFF6CA0FF),
+                                      color: Color(0xFF2F3316),
                                       offset: Offset(0, 0),
                                     ),
                                   ],

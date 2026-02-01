@@ -160,7 +160,7 @@ class _MapPageState extends State<MapPage> {
         ? const Center(child: CircularProgressIndicator())
         : Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Color(0xFFA3822A), width: 3),
+        border: Border.all(color: Color(0xFFb2d102), width: 3),
         borderRadius: BorderRadius.circular(20),
       ),
       child: ClipRRect(

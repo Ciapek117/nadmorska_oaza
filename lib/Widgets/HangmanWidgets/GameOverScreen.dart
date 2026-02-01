@@ -25,14 +25,14 @@ class GameOverScreen extends StatelessWidget {
               isWinner ? "🎉 Gratulacje! Odgadłeś hasło! 🎉" : "💀 Przegrałeś! Hasło to: $wordToGuess",
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
-                textStyle: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
+                textStyle: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color(0xFFE8F3B2)),
               ),
             ),
             SizedBox(height: 20),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF0c4767),
-                foregroundColor: Colors.white,
+                backgroundColor: Color(0xFF96B100),
+                foregroundColor: Color(0xFFE8F3B2),
               ),
               onPressed: isWinner ? () => Navigator.pop(context, true) : onRestart,
               child: Text(

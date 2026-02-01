@@ -111,7 +111,7 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
-        backgroundColor: Color(0xFF0c4767),
+        backgroundColor: Color(0xFF216E97).withOpacity(0.5),
         title: Text("Gratulacje!", style: TextStyle(color: Color(0xFFEFA00B)),),
         content: Text("Ułożyłeś puzzle poprawnie!", style: TextStyle(color: Color(0xFFEFA00B))),
         actions: [

@@ -13,7 +13,7 @@ class LivesDisplay extends StatelessWidget {
         style: GoogleFonts.poppins(
           textStyle: TextStyle(
             fontSize: 30,
-            color: Colors.white,
+            color: Color(0xFF2F3316),
             fontWeight: FontWeight.bold,
             letterSpacing: 2,
           ),

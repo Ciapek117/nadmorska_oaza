@@ -16,7 +16,7 @@ class ScorePong extends StatelessWidget {
             "Punkty: $score",
             textAlign: TextAlign.center,
             style: GoogleFonts.poppins(
-              color: Color(0xFFefa00b),
+              color: Color(0xff2F3316),
               fontSize: 24,
               fontWeight: FontWeight.bold,
             )));

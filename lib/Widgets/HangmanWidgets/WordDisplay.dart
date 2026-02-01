@@ -11,7 +11,7 @@ class WordDisplay extends StatelessWidget {
     return Text(
       wordGuessed.join(" "),
       style: GoogleFonts.poppins(
-        textStyle: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: Color(0xFFefa00b)),
+        textStyle: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: Color(0xFF2F3316)),
       ),
     );
   }
